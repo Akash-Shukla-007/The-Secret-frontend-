@@ -1,11 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 node_modules
 .env
-.rest
 route.rest
-/servers/tsconfig.json
-/servers/route.rest
-/route.rest
+
 
 # dependencies
 /node_modules
