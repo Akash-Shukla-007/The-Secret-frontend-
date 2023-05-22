@@ -2,7 +2,7 @@
 node_modules
 .env
 route.rest
-
+tsconfig.json
 
 # dependencies
 /node_modules
