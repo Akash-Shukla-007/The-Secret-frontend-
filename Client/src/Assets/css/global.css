@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.button{
+    background-color: aqua;
+    min-width: 300px;
+    max-width: 50%;
+    align-self: center;
+    margin: 2em ;
+}
+.default_page_container{
+    position: relative;
+}
+.loader{
+    z-index: 5;
+    position: absolute;
+    background-color: rgba(176, 187, 189, 0.547);
+    width: 100vw;
+    height: 100vh;
+  }
+  .loader_main{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #212223;
+    animation: loader 1s ease-in-out infinite; 
+  }
+  @keyframes loader{
+    0%{
+      transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    50%{
+      transform: translateX(-50%) translateY(-50%)  rotate(180deg);
+    }100%{
+      transform: translateX(-50%) translateY(-50%)  rotate(360deg);
+    }
+  }
+.default_page_outlet{
+    padding:0 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.default_page_outlet_add{
+    padding:1.5em;
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border: double 3px transparent;
+    border-style: solid;
+    border-radius: 6px;
+    border-image: linear-gradient(white, white), 
+                        linear-gradient(to right, orange, yellow);
+    box-shadow: 2px 2px 10px rgb(70, 70, 70);
+}
+.profile_view{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+.profile_childs{
+    display: flex;
+    width: 100%;
+}
+.profile_childs p{
+    font-family: 'Roboto', sans-serif;
+    padding: 1em;
+}
+.profile_childs_ll{
+    width: 40%;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    background-color: rgb(90, 180, 80);
+}
+.profile_childs_rr{
+    width: 60%;
+    box-shadow: 2px 2px 5px rgb(104, 102, 102);
+
+}
+
+.default_page_outlet_two{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 5%;
+    row-gap: 30px;
+
+    justify-content: center;
+}
+.notes_card_container{
+    width: 320px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    padding: 0.8em 1em;
+    box-shadow: 1px 1px 10px black;
+
+}
+.add_new_head{
+    font-size: 3rem;
+    align-self: center;
+    font-weight: 600;
+    padding: 0 0 0.4em 0;
+    /* font-family: 'Roboto', sans-serif; */
+    /* text-transform: uppercase ; */
+}
+.notes_card_container_para{
+    font-size: 1.3rem;
+}
+.notes_card_container_date{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between  ;
+}
+.notes_card_container_date h2{
+    background-color: rgb(90, 180, 80);
+    padding: 3px 4px;
+    color: white;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.edit{
+    width: fit-content;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    background-color: red;
+} 
+.notes_card_container_action{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+.notes_card_container_action h1{
+    width: 100%;
+}
+.notes_card_container_button{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.align_center{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    align-self: flex-end;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px black;
+}
+.default_page_navline{
+    background-color: rgb(121, 125, 122);
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Profile_button{
+    padding: 0.65em 0.8em; 
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(195, 195, 195);
+    cursor: pointer;
+}
+.Profile_button:hover{
+    transition: 1s;
+    background-color: rgba(0, 163, 46, 0.821);
+    color: white;
+}
+
+.logo_image-nav{
+    
+}   
+
+@media (max-width:510px) {
+    .Profile_button{
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        border-bottom: 1px solid white;
+        border-radius: 0px;
+        font-weight: 500;
+        margin-top: 4px;
+    }
+    .logo_image-nav{
+        width: 140px;
+        /* background-color: aqua  ; */
+    }   
+    .default_page_navline{
+        padding: 0.8em 1em 1em 1em;
+        flex-direction: column;
+    }
+    .default_page_outlet_add{
+        padding:1em;
+        width: 90%;
+        margin-top: 3em;    
+    }
+    .add_new_head{
+        font-size: 2.5rem;
+
+    }
+
+}
