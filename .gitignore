@@ -3,6 +3,9 @@ node_modules
 .env
 .rest
 route.rest
+/servers/tsconfig.json
+/servers/route.rest
+
 # dependencies
 /node_modules
 /.pnp
