@@ -5,6 +5,7 @@ node_modules
 route.rest
 /servers/tsconfig.json
 /servers/route.rest
+/route.rest
 
 # dependencies
 /node_modules
