@@ -20,28 +20,32 @@ export default function VerifyOtp() {
   const navigate = useNavigate();
   const Location = useLocation();
   const [otp, setOtp] = useState("");
+  const [otpErrorText, setOtpErrorText] = useState("");
 
   const onSubmit = async () => {
     Location.state.otp = otp;
-    if (otp == "") return;
+    if (otp == "") {
+      setOtpErrorText("Enter Otp");
+      return;
+    }
 
     if (!Location.state.name) {
-      console.log("forgot hit");
+      // console.log("forgot hit");
       setloading(true);
       await confirmEmail(Location.state)
         .then((res: any) => {
           setloading(false);
           const data = res.data;
           data.email = Location.state.email;
-          console.log("verify");
-          console.log(data);
+          // console.log("verify");
+          // console.log(data);
           navigate("/new-pass", { state: data });
           return;
         })
         .catch((err) => {
           setloading(false);
-
-          console.log(err);
+          setOtpErrorText("Enter correct Otp");
+          // console.log(err);
           return;
         });
     } else {
@@ -50,16 +54,18 @@ export default function VerifyOtp() {
         .then((res) => {
           setloading(false);
           const data = res.data;
-          console.log("default");
+          // console.log("default");
           localStorage.setItem("loginToken", res.data.token);
           window.location.reload();
         })
         .catch((err) => {
           setloading(false);
-          console.log(err);
+          setOtpErrorText("Enter correct Otp");
+          // console.log("error --> " + err);
         });
     }
   };
+
   return (
     <>
       <div className="auth_root">
@@ -78,6 +84,7 @@ export default function VerifyOtp() {
             placeholder="Otp"
             type="number"
             name="otp"
+            errorText={otpErrorText}
             setValue={setOtp}
           />
           <button onClick={onSubmit}>Proceed</button>

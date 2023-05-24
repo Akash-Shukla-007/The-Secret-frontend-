@@ -1,4 +1,5 @@
 import crypto from "crypto";
+import otpSender from "../services/otpSender";
 
 const createNewOtp = (email: any) => {
   const key = process.env.OTP_SECRET;
@@ -11,8 +12,8 @@ const createNewOtp = (email: any) => {
     .update(data)
     .digest("hex");
   const fullhash = `${hash}.${expiry}`;
-
-  console.log(otp);
+  otpSender(otp, email);
+  // console.log(otp);
 
   return fullhash;
 };

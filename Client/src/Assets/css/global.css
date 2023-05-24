@@ -43,7 +43,7 @@
 .default_page_outlet_add{
     padding:1.5em;
     margin: 0 auto;
-    width: 70%;
+    width: 90%;
     margin-top: 5em;
     display: flex;
     flex-direction: column;
@@ -60,6 +60,7 @@
     flex-direction: column;
     width: 100%;
     justify-content: space-between;
+
 }
 .profile_childs{
     display: flex;
@@ -182,11 +183,9 @@
     color: white;
 }
 
-.logo_image-nav{
-    
-}   
 
 @media (max-width:510px) {
+
     .Profile_button{
         background-color: transparent;
         color: rgb(255, 255, 255);
@@ -204,7 +203,7 @@
         flex-direction: column;
     }
     .default_page_outlet_add{
-        padding:1em;
+        padding:0em;
         width: 90%;
         margin-top: 3em;    
     }
@@ -213,4 +212,7 @@
 
     }
 
+}
+.profile_childs_rr.email{
+    overflow: hidden;
 }

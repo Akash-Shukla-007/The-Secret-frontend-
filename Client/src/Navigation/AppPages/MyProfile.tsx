@@ -39,12 +39,12 @@ function MyProfile() {
             " " +
             dob.getFullYear();
           prevData[0].dob = dateOfBirth;
-          // console.log(prevData);
           return prevData;
         });
       })
       .catch((err) => {
         setLoading(false);
+
         console.log(err);
       });
   }, []);
@@ -71,7 +71,7 @@ function MyProfile() {
             </div>
             <div className="profile_childs">
               <p className="profile_childs_ll">Email</p>
-              <p className="profile_childs_rr">
+              <p className="profile_childs_rr email">
                 {!loading && profileData[0].email}
               </p>
             </div>
