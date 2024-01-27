@@ -5,6 +5,7 @@ import createUser from "../services/createUser";
 import tokenGenerator from "../services/tokenGenerator";
 import createNewOtp from "../utilities/createOtp";
 const bcrypt = require("bcrypt");
+const axios = require("axios");
 
 // Getting Started
 const registerUser = async (req: any, res: any) => {

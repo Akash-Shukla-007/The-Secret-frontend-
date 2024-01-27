@@ -114,6 +114,7 @@ export default function Auth({ isSignup }: any, { setIsSignup }: any) {
         })
         .catch((err) => {
           setLoading(false);
+
           if (err.response.data.message) {
             return setEmailErrorText(err.response.data.message);
           }

@@ -7,7 +7,7 @@ import {
   signUp,
 } from "../Controllers/authController";
 
-const express = require("express");
+import express from "express";
 const router = express.Router();
 
 router.post("/getting-started", registerUser);
